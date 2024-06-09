@@ -1,0 +1,23 @@
+﻿{
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:causal;1"
+  ],
+  "@graph": [
+    {
+      "@id": "dtmi:dtdl:extension:causal:v1:documentation",
+      "@type": [ "dtmm:Documentation" ],
+      "dtmm:description": {
+        "en-US": "Indicates that a Property has a causal connection. This means that every change in the digital or the physical twin must be synchronized."
+      }
+    },
+    {
+      "@id": "dtmi:dtdl:extension:causal:v1:Causal",
+      "@type": [ "rdfs:Class", "sh:NodeShape" ],
+      "rdfs:subClassOf": "AdjunctType",
+      "sh:or": [
+        { "sh:class": "dtmi:dtdl:class:Property;3" }
+      ]
+    }
+  ]
+}
